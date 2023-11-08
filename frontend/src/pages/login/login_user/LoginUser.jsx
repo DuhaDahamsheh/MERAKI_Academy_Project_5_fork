@@ -127,7 +127,7 @@ const notifyErr = () =>
                 onClick={() => {
                   
                   axios
-                    .post(`${process.env.React_URL}/users/login`, {
+                    .post(`https://cure-app-ibmi.onrender.com/users/login`, {
                       email,
                       password,
                     })
@@ -167,7 +167,7 @@ const notifyErr = () =>
         onClick={() => {
          
           axios
-            .post(`${process.env.React_URL}/users/login`, {
+            .post(`https://cure-app-ibmi.onrender.com/users/login`, {
               email: google.email,
               password: google.azp,
             })

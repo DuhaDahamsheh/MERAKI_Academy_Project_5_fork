@@ -50,7 +50,7 @@ const Feadback_reviwes = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/reviews/provider/${id}`, {
+      .get(`https://cure-app-ibmi.onrender.com/reviews/provider/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -148,7 +148,7 @@ const notifyErr = () =>
                         onClick={() => {
                           axios
                             .post(
-                              `${process.env.React_URL}/reviews/`,
+                              `https://cure-app-ibmi.onrender.com/reviews/`,
                               {
                                 review: post,
                                 user_id: userId,
@@ -223,7 +223,7 @@ const notifyErr = () =>
                                 onClick={() => {
                                   axios
                                     .delete(
-                                      `${process.env.React_URL}/reviews/${comment.review_id}`,
+                                      `https://cure-app-ibmi.onrender.com/reviews/${comment.review_id}`,
                                       {
                                         headers: {
                                           Authorization: `Bearer ${token}`,
@@ -251,7 +251,7 @@ const notifyErr = () =>
                                   onClick={() => {
                                     axios
                                       .put(
-                                        `${process.env.React_URL}/reviews/user/${comment.review_id}`,
+                                        `https://cure-app-ibmi.onrender.com/reviews/user/${comment.review_id}`,
                                         { review: update },
                                         {
                                           headers: {

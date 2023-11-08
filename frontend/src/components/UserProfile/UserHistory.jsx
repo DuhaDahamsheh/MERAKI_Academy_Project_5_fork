@@ -46,7 +46,7 @@ import {
     });
 
     useEffect(()=>{
-        axios.get(`${process.env.React_URL}/history/users/`,{
+        axios.get(`https://cure-app-ibmi.onrender.com/history/users/`,{
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -160,7 +160,7 @@ import {
               <MDBIcon fas icon="times" size="lg"/> Close
               </MDBBtn>
               <MDBBtn onClick={()=>{
-                axios.put(`${process.env.React_URL}/history/${data.medical_history_id}`,{history :newHistories,medications:newMedications,
+                axios.put(`https://cure-app-ibmi.onrender.com/history/${data.medical_history_id}`,{history :newHistories,medications:newMedications,
                 chronic_diseases:newChronic_diseases},{
                     headers: {
                       Authorization: `Bearer ${token}`,
@@ -184,7 +184,7 @@ import {
                           className="ms-1"
                           style={{ height: "36px", overflow: "visible" }}
                           onClick={()=>{
-                            axios.delete(`${process.env.React_URL}/history/${data.medical_history_id}`,{
+                            axios.delete(`https://cure-app-ibmi.onrender.com/history/${data.medical_history_id}`,{
                                 headers: {
                                   Authorization: `Bearer ${token}`,
                                 },

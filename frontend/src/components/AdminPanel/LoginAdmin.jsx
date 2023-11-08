@@ -45,7 +45,7 @@ const [password, setPassword] = useState("")
               <MDBBtn outline className='mx-2 px-5' color='white' size='lg'
               onClick={() => {
                 axios
-                  .post(`${process.env.React_URL}/users/login`, {
+                  .post(`https://cure-app-ibmi.onrender.com/users/login`, {
                     email,
                     password,
                   })

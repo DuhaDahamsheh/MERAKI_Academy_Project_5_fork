@@ -33,7 +33,7 @@ const [url, setUrl] = useState("");
 const [categ ,setCateg]=useState("")
 
 const insert_info = (urlFile) => {
-  axios.post(`${process.env.React_URL}/categories/`,{category:categ ,img:urlFile}).then((result)=>{
+  axios.post(`https://cure-app-ibmi.onrender.com/categories/`,{category:categ ,img:urlFile}).then((result)=>{
   }).catch((err)=>{
     console.log(err);
   })
@@ -55,7 +55,7 @@ const uploadImage = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/categories/`)
+      .get(`https://cure-app-ibmi.onrender.com/categories/`)
       .then((result) => {
         setCategory(result.data.data);
       })
@@ -134,7 +134,7 @@ if(category.length == 0){
         </MDBCard>  
         </MDBCardBody>
      <MDBBtn color='danger' onClick={()=>{
-      axios.delete(`${process.env.React_URL}/categories/delete/${data.category_id}`).then((result)=>{
+      axios.delete(`https://cure-app-ibmi.onrender.com/categories/delete/${data.category_id}`).then((result)=>{
       }).catch((err)=>{
         console.log(err);
       })

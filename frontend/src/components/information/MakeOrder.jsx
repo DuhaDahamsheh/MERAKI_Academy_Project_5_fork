@@ -50,7 +50,7 @@ const MakeOrder = () => {
   const makeOrders =()=>{
     axios
     .post(
-      `${process.env.React_URL}/orders/`,
+      `https://cure-app-ibmi.onrender.com/orders/`,
       {
         service_id: serv,
         provider_id: id,
@@ -91,7 +91,7 @@ const MakeOrder = () => {
     };
   });
   const update =(id)=>{
-    axios.put(`${process.env.React_URL}/schedules/updateBooked/`,{schedule_id:id},{
+    axios.put(`https://cure-app-ibmi.onrender.com/schedules/updateBooked/`,{schedule_id:id},{
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -103,7 +103,7 @@ dispatch(updateSchedule(id))
   }
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/schedules/notchosen/${id}`, {
+      .get(`https://cure-app-ibmi.onrender.com/schedules/notchosen/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

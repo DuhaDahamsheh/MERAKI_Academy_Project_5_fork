@@ -74,7 +74,7 @@ export default function RegisterProvider() {
 
   const getCategory = () => {
     axios
-      .get(`${process.env.React_URL}/categories/`)
+      .get(`https://cure-app-ibmi.onrender.com/categories/`)
       .then((result) => {
         setCategory(result.data.data);
       })
@@ -310,7 +310,7 @@ export default function RegisterProvider() {
                 sx={{ mt: 3, mb: 2 }}
                 onClick={() => {
                   axios
-                    .post(`${process.env.React_URL}/providers/`, {
+                    .post(`https://cure-app-ibmi.onrender.com/providers/`, {
                       fName: data.fName,
                       lName: data.lName,
                       birthDate: data.birthDate,

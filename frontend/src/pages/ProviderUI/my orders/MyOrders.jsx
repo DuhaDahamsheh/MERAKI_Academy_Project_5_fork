@@ -25,7 +25,7 @@ const MyOrders = () => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.React_URL}/orders/provider/${providerId}/?skip=${count}`,
+        `https://cure-app-ibmi.onrender.com/orders/provider/${providerId}/?skip=${count}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

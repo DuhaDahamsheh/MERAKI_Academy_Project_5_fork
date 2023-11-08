@@ -15,7 +15,7 @@ const Categories = () => {
   const history = useNavigate();
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/categories/`)
+      .get(`https://cure-app-ibmi.onrender.com/categories/`)
       .then((result) => {
         setCategory(result.data.data);
       })

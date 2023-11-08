@@ -33,7 +33,7 @@ const { token } = useSelector((state) => {
       });
      
     useEffect(()=>{
-axios.get(`${process.env.React_URL}/orders/done/?pageNumber=${count}`,{ headers: {
+axios.get(`https://cure-app-ibmi.onrender.com/orders/done/?pageNumber=${count}`,{ headers: {
     Authorization: `Bearer ${token}`,
   }}).then((result)=>{
     console.log(result.data);

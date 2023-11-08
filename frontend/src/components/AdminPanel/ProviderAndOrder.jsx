@@ -21,7 +21,7 @@ const ProviderAndOrder = () => {
   // ========================Get all functions start====================================
 const getAllProviders=()=>{
   axios
-  .get(`${process.env.React_URL}/providers/all/?skip=${count}`, {
+  .get(`https://cure-app-ibmi.onrender.com/providers/all/?skip=${count}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

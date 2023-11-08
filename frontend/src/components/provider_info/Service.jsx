@@ -34,7 +34,7 @@ const Service = () => {
   const insert_service = () => {
     axios
       .post(
-        `${process.env.React_URL}/services`,{
+        `https://cure-app-ibmi.onrender.com/services`,{
           service: service ,
           price_per_hour: price ,
           provider_id: providerId,

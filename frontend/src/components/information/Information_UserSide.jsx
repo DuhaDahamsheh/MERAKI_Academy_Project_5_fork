@@ -44,7 +44,7 @@ export default function Information_UserSide() {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/provider_info/${id}`, {
+      .get(`https://cure-app-ibmi.onrender.com/provider_info/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

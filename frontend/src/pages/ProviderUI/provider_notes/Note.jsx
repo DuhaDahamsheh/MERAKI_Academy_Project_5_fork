@@ -80,7 +80,7 @@ const notifyErr = () =>
   // ==========get all notes===================
   const getNotes = () => {
     axios
-      .get(`${process.env.React_URL}/notes/byProvider/`, {
+      .get(`https://cure-app-ibmi.onrender.com/notes/byProvider/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -104,7 +104,7 @@ const notifyErr = () =>
   const getUserNotes = () => {
     axios
       .get(
-        `${process.env.React_URL}/notes/byUser/usernotes/?id=${parseInt(query)}`,
+        `https://cure-app-ibmi.onrender.com/notes/byUser/usernotes/?id=${parseInt(query)}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -201,7 +201,7 @@ const notifyErr = () =>
                     }, 2000);
                 axios
                   .post(
-                    `${process.env.React_URL}/notes/`,
+                    `https://cure-app-ibmi.onrender.com/notes/`,
                     { user_id: ptId, note },
                     {
                       headers: {
@@ -263,7 +263,7 @@ const notifyErr = () =>
                     <div style={{ display: "flex", flexDirection: "row" ,justifyContent:"space-evenly", cursor:"pointer"}}>
                       <div
                       onClick={()=>{
-                        axios.delete( `${process.env.React_URL}/notes/${note.provider_note_id}`, {
+                        axios.delete( `https://cure-app-ibmi.onrender.com/notes/${note.provider_note_id}`, {
                           headers: {
                             Authorization: `Bearer ${token}`,
                           },
@@ -283,7 +283,7 @@ const notifyErr = () =>
                       <div
                       onClick={()=>{
                        setEdit(note.provider_note_id)
-                        axios.put( `${process.env.React_URL}/notes/${note.provider_note_id}`,{note:updatedNote ,user_id:note.user_id}, {
+                        axios.put( `https://cure-app-ibmi.onrender.com/notes/${note.provider_note_id}`,{note:updatedNote ,user_id:note.user_id}, {
                           headers: {
                             Authorization: `Bearer ${token}`,
                           },

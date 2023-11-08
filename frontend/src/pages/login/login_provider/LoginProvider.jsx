@@ -118,7 +118,7 @@ const notifyErr = () =>
                   size="lg"
                   onClick={() => {
                     axios
-                      .post(`${process.env.React_URL}/users/loginProvider/`, {
+                      .post(`https://cure-app-ibmi.onrender.com/users/loginProvider/`, {
                         email,
                         password,
                       })

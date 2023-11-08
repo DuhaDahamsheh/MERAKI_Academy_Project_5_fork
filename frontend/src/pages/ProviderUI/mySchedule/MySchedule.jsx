@@ -83,7 +83,7 @@ const notifyErr = () =>
   const getBookedCount = () => {
     axios
       .get(
-        `${process.env.React_URL}/schedules/CountBookedByProvider/${providerId}`,
+        `https://cure-app-ibmi.onrender.com/schedules/CountBookedByProvider/${providerId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -102,7 +102,7 @@ const notifyErr = () =>
 
   const getSchedules = () => {
     axios
-      .get(`${process.env.React_URL}/schedules/ByProvider/${providerId}`, {
+      .get(`https://cure-app-ibmi.onrender.com/schedules/ByProvider/${providerId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -144,7 +144,7 @@ const notifyErr = () =>
   const addSchedules = () => {
     axios
       .post(
-        `${process.env.React_URL}/schedules/`,
+        `https://cure-app-ibmi.onrender.com/schedules/`,
         { time_from: timeFrom, time_to: timeTo, DATE: date },
         {
           headers: {
@@ -282,7 +282,7 @@ const notifyErr = () =>
                           onClick={() => {
                             axios
                               .delete(
-                                `${process.env.React_URL}/schedules/ById/${sc.schedule_id}`,
+                                `https://cure-app-ibmi.onrender.com/schedules/ById/${sc.schedule_id}`,
                                 {
                                   headers: {
                                     Authorization: `Bearer ${token}`,

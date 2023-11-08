@@ -39,7 +39,7 @@ const Info = () => {
   const insert_info = (urlFile) => {
     axios
       .post(
-        `${process.env.React_URL}/provider_info`,
+        `https://cure-app-ibmi.onrender.com/provider_info`,
         {
           bio: bio || "",
           qualifications: qua || "",

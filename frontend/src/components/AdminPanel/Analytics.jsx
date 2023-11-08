@@ -35,7 +35,7 @@ const Analytics = () => {
   });
   const getUsers = () => {
     axios
-      .get(`${process.env.React_URL}/users/conutOfUsers/`, {
+      .get(`https://cure-app-ibmi.onrender.com/users/conutOfUsers/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ const Analytics = () => {
 
   const getCategory = () => {
     axios
-      .get(`${process.env.React_URL}/categories/countAllCategories`, {
+      .get(`https://cure-app-ibmi.onrender.com/categories/countAllCategories`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

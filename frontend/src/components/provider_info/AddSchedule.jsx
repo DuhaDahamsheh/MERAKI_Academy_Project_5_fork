@@ -57,7 +57,7 @@ const AddSchedule = () => {
   const setSchedules = () => {
     axios
       .post(
-        `${process.env.React_URL}/schedules/`,
+        `https://cure-app-ibmi.onrender.com/schedules/`,
         { time_from: timeFrom, time_to: timeTo,DATE:date },
         {
           headers: {

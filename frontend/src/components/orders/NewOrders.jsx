@@ -45,7 +45,7 @@ const NewOrders = () => {
   });
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/orders/`, {
+      .get(`https://cure-app-ibmi.onrender.com/orders/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -192,7 +192,7 @@ const NewOrders = () => {
 
                                   axios
                                     .get(
-                                      `${process.env.React_URL}/orders/byId/${item.order_id}`,
+                                      `https://cure-app-ibmi.onrender.com/orders/byId/${item.order_id}`,
                                       {
                                         headers: {
                                           Authorization: `Bearer ${token}`,
@@ -330,7 +330,7 @@ const NewOrders = () => {
                                             </MDBModalBody>
                                             <MDBBtn onClick={()=>{
                                               console.log(token);
-                                              axios.put(`${process.env.React_URL}/orders/ByOrder/${ord.order_id}`,{},{ headers: {
+                                              axios.put(`https://cure-app-ibmi.onrender.com/orders/ByOrder/${ord.order_id}`,{},{ headers: {
                                                 Authorization: `Bearer ${token}`,
                                               },
                                             }).then((result)=>{

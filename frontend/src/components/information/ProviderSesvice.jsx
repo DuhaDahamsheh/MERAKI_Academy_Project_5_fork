@@ -38,7 +38,7 @@ const ProviderSesvice = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.React_URL}/services/byId/${id}`, {
+      .get(`https://cure-app-ibmi.onrender.com/services/byId/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -64,7 +64,7 @@ const ProviderSesvice = () => {
       className="ms-1"
         onClick={() => {
           axios
-            .get(`${process.env.React_URL}/services/price_ASC/${id}`, {
+            .get(`https://cure-app-ibmi.onrender.com/services/price_ASC/${id}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },
@@ -86,7 +86,7 @@ const ProviderSesvice = () => {
         outline
         onClick={() => {
           axios
-            .get(`${process.env.React_URL}/services/price_DESC/${id}`, {
+            .get(`https://cure-app-ibmi.onrender.com/services/price_DESC/${id}`, {
               headers: {
                 Authorization: `Bearer ${token}`,
               },

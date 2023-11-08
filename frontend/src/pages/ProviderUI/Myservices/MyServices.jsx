@@ -83,7 +83,7 @@ const notifyErr = () =>
 
   const getservices = () => {
     axios
-      .get(`${process.env.React_URL}/services/byId/${providerId}`, {
+      .get(`https://cure-app-ibmi.onrender.com/services/byId/${providerId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -101,7 +101,7 @@ const notifyErr = () =>
   const update_service = (id) => {
     axios
       .put(
-        `${process.env.React_URL}/services/byId/${id}`,
+        `https://cure-app-ibmi.onrender.com/services/byId/${id}`,
         { service:serviceNew, price_per_hour:price},
         {
           headers: {
@@ -124,7 +124,7 @@ const notifyErr = () =>
   const add_service = () => {
     axios
       .post(
-        `${process.env.React_URL}/services`,{
+        `https://cure-app-ibmi.onrender.com/services`,{
           service: newService ||null,
           price_per_hour: newPrice ||null,
           provider_id: providerId,
@@ -220,7 +220,7 @@ const notifyErr = () =>
                   Edit Service
                 </Button>
                 <Button variant="primary" onClick={()=>{
-                      axios.delete(`${process.env.React_URL}/services/${ser.service_id}`,{
+                      axios.delete(`https://cure-app-ibmi.onrender.com/services/${ser.service_id}`,{
                         headers: {
                           Authorization: `Bearer ${token}`,
                         },

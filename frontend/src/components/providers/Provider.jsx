@@ -28,7 +28,7 @@ const Provider = () => {
       });
 const {id}=useParams()
 useEffect(()=>{
-axios.get(`${process.env.React_URL}/provider_info/category/${id}`,{
+axios.get(`https://cure-app-ibmi.onrender.com/provider_info/category/${id}`,{
     headers: {
       Authorization: `Bearer ${token}`,
     },
